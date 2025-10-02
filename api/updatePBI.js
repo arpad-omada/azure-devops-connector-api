@@ -48,7 +48,7 @@ export default async function handler(req, res) {
       const state = fields['System.State'];
       const remainingWork = fields['Microsoft.VSTS.Scheduling.RemainingWork'] || 0;
 
-      if (state !== 'Done') {
+      if (state !== 'Done' || state !== 'Removed') {
         allDone = false;
         totalRemainingWork += Math.round(remainingWork);
       }
