@@ -54,7 +54,7 @@ export default async function handler(req, res) {
       }
     }
 
-    let effort = totalRemainingWork === 0 ? 0 : Math.ceil(totalRemainingWork / 6);
+/*    let effort = totalRemainingWork === 0 ? 0 : Math.ceil(totalRemainingWork / 6);
     const patchBody = [
       {
         op: 'add',
@@ -62,7 +62,7 @@ export default async function handler(req, res) {
         value: effort
       }
     ];
-
+*/
     if (allDone) {
       patchBody.push({
         op: 'add',
